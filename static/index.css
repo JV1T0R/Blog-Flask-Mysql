@@ -1,0 +1,77 @@
+/*
+----Color Pallet----
+Black: #17252a
+Dark-Green: #2b7a78
+Light-Green: #3aafa9
+Light-Grey: #def2f1
+White: #feffff
+--------------------
+ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3aafa9;
+    color: #feffff;
+}
+
+header {
+    background-color: #2b7a78;
+    padding: 1em;
+}
+
+main {
+    margin-top: 4em;
+}
+
+.feed {
+    text-align: center;
+    padding: 1em;
+}
+
+.noPosts {
+    padding: 2em;
+}
+
+.post {
+    background-color: #2b7a78;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.post h3 {
+    margin-bottom: 15px;
+}
+
+.newPost {
+    background-color: #2b7a78;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.newPost h2 {
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog com Flask</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Blog com Flask</h1>
+    </header>
+
+    <main>
+         <div class="feed">
+             <h2>Postagens</h2>
+
+             {% if postagens %}
+                 {% for postagem in postagens %}
+                    <div class="post">
+                        <h3>{{ postagem[1] }}</h3>
+                        <p>{{ postagem[2] }}</p>
+                    </div>
+                 {% endfor %}
+                 {% else %}
+                    <h3 class="noPosts">{{ sem_postagens }}</h3>
+             {% endif %}
+         </div>
+
+        <div class="newPost">
+            <h2>Criar Postagem</h2>
+
+            <form action="/" method="POST">
+                {% if campo_vazio %}
+                    <p class="campoVazio">{{ campo_vazio }}</p>
+                {% endif %}
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="Título">
+                <label for="content">Conteúdo:</label>
+                <textarea id="content" name="Conteúdo"></textarea>
+                <input type="submit" value="Publicar Postagem">
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>
